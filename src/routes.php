@@ -13,13 +13,11 @@
 
 
 
-Route::resource('beta', 'betaController', array('only' => array('store')));
+Route::post('beta', 'Belar\BetaUp\BetaController@store');
+Route::get('/beta/activate/{activation_code}', 'Belar\BetaUp\BetaController@activateBeta');
 
-Route::controller('beta', 'betaController');
-Route::get('/beta/activate/{activation_code}', 'betaController@activateBeta');
-
-Route::get('/', function()
+Route::get('/beta', function()
 {
-	return View::make('beta.landing');
+	return View::make('betaup::beta.landing');
 });
 

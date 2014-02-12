@@ -1,6 +1,6 @@
-<?php
+<?php namespace Belar\BetaUp;
 
-class Beta extends Eloquent {
+class Beta extends \Eloquent {
 
 	/**
 	 * The database table used by the model.

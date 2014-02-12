@@ -1,5 +1,7 @@
 <?php
 
+namespace Belar\BetaUp;
+
 class BetaController extends \BaseController {
 
 	/**
@@ -30,31 +32,31 @@ class BetaController extends \BaseController {
 	public function store()
 	{
 				// Fetch all request data.
-			$data = Input::only('email');
+			$data = \Input::only('email');
 			// Build the validation constraint set.
 			$rules = array(
 				'email' => array('required', 'min:3', 'max:100', 'unique:beta_newsletters'),
 			);
 			// Create a new validator instance.
-			$validator = Validator::make($data, $rules);
+			$validator = \Validator::make($data, $rules);
 				if ($validator->passes()) {
 					
 					$beta = new Beta();
-					$beta->email = Input::get('email');
+					$beta->email = \Input::get('email');
 					
 					$activation_code = uniqid(rand(1000, 6000), true);
 					$beta->activation_code = $activation_code;
 					
-					Mail::send('beta.activate', array('activation_code' => $activation_code), function($message)
+					\Mail::send('betaup::beta.activate', array('activation_code' => $activation_code), function($message)
 					{
-						$message->to(Input::get('email'))->subject('Welcome!');
+						$message->to(\Input::get('email'))->subject('Welcome!');
 					});
 					
 								
 					$beta->save();
-					return Redirect::to('/')->with('global_success', 'You have been signed up successfuly!');
+					return \Redirect::to('/beta')->with('global_success', 'You have been signed up successfuly!');
 				}
-			return Redirect::to('/')->withInput()->withErrors($validator)->with('message', 'Validation Errors!');
+			return \Redirect::to('/beta')->withInput()->withErrors($validator)->with('message', 'Validation Errors!');
 	}
 
 	/**
@@ -112,10 +114,10 @@ class BetaController extends \BaseController {
 					$active->activation_code = '';
 					$active->save();
 
-					return Redirect::to('/');
+					return \Redirect::to('/beta');
 				}
 				
-			return Redirect::to('/');
+			return \Redirect::to('/beta');
 	}
 
 }
