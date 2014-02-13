@@ -1,10 +1,24 @@
-BetaUp
+BetaUp [beta]
 =======
 
-Simple Composer package for setting up pre-beta, hype, sign up page with e-mail activation (confirmation) for **Laravel**.
+It's a Composer package for **Laravel** taht allows setting up pre-launch, sign up page with e-mail activation (confirmation). Package includes model for beta-user, migrations and basic view.
 
 ####Installation
-Soon
+1. Add "belar/betaup": "dev-master" to your composer.json file.
+2. Edit app/config/app.php and add `'Belar\Betaup\BetaupServiceProvider',` to your providers list:
+```php
+'providers' => array(
+		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
+		'Illuminate\Auth\AuthServiceProvider',
+		...
+		'Belar\Betaup\BetaupServiceProvider',
+	),
+```
+3. Migrate `php artisan migrate --package="belar/betaup"`
+4. Publish assets `php artisan asset:publish belar/betaup`
+5. Copy Views to adjust `php artisan view:publish belar/betaup` (Optional)
+
+Now you should be able to access BetaUp via `your_domain/beta`.
 
 ####Changelog
 
