@@ -22,7 +22,7 @@ Now you should be able to access BetaUp via `your_domain/beta`.
 
 ####Incoming features
 
-Early access codes
+Early access codes  
 Mass mail
 
 ####Changelog
