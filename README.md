@@ -16,7 +16,7 @@ It's a Composer package for **Laravel** taht allows setting up pre-launch, sign 
 ```
 3. Migrate `php artisan migrate --package="belar/betaup"`
 4. Publish assets `php artisan asset:publish belar/betaup`
-5. Copy Views to adjust `php artisan view:publish belar/betaup` (Optional)
+5. (Optional) Copy Views to adjust `php artisan view:publish belar/betaup`
 
 Now you should be able to access BetaUp via `your_domain/beta`.
 
