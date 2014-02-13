@@ -20,6 +20,11 @@ It's a Composer package for **Laravel** taht allows setting up pre-launch, sign 
 
 Now you should be able to access BetaUp via `your_domain/beta`.
 
+####Incoming features
+
+Early access codes
+Mass mail
+
 ####Changelog
 
 2.0.0  
