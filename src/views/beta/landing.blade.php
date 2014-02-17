@@ -11,7 +11,7 @@
     <title>Beta Sign Up</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ URL::asset('/css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('packages/belar/betaup/css/bootstrap.css') }}" rel="stylesheet">
 	  
 
     <!-- Custom styles for this template -->
@@ -49,8 +49,7 @@
 		  {{Form::close();}}
 		 </div> 
     </div> <!-- /container -->
-
-
+      
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

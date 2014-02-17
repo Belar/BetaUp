@@ -20,12 +20,21 @@ It's a Composer package for **Laravel** taht allows setting up pre-launch, sign 
 
 Now you should be able to access BetaUp via `your_domain/beta`.
 
+####Docs - Available functions
+#####Beta key generator  
+`generateBetaCode($amount)` - Generates `$amount` of unique Beta codes, 1 by default.  
+`getBetaCodes($type)` - Will fetch all beta keys matching criteria, avaialble options are `used` for keys already activated and `available` for unused keys. Empty call will return all codes available.  
+`getFirstBetaCodeAvailable` - Returns 1st available key.  
+`checkBetaCode` - Checks if code submited by user is vaild aka exists in beta codes table. Returns `true` if code is correct and unused.  
+
 ####Incoming features
 
-Early access codes  
 Mass mail
 
 ####Changelog
+
+2.1.0  
+- beta code generator
 
 2.0.0  
 - composer package

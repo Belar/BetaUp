@@ -1,6 +1,6 @@
 {
     "name": "belar/betaup",
-    "description": "Pre-launch",
+    "description": "A Laravel 4 package for easy and comfortable pre-launch page setup",
     "authors": [
         {
             "name": "Belar",

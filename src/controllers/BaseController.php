@@ -1,6 +1,6 @@
 <?php
 
-namespace Belar\BetaUp;
+namespace Belar\Betaup;
 
 use Illuminate\Routing\Controller;
 

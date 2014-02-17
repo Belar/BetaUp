@@ -1,6 +1,6 @@
 <?php
 
-namespace Belar\BetaUp;
+namespace Belar\Betaup;
 
 class BetaController extends \BaseController {
 
@@ -116,8 +116,7 @@ class BetaController extends \BaseController {
 
 					return \Redirect::to('/beta');
 				}
-				
 			return \Redirect::to('/beta');
 	}
-
+    
 }
