@@ -11,13 +11,11 @@
 |
 */
 
+Route::get('/beta/massmail', 'Belar\Betaup\BetaController@massMail');
+Route::post('/beta/massmail', 'Belar\Betaup\BetaController@massMailAction');
 
+Route::post('beta', 'Belar\Betaup\BetaController@store');
+Route::get('/beta/activate/{activation_code}', 'Belar\Betaup\BetaController@activateBeta');
 
-Route::post('beta', 'Belar\BetaUp\BetaController@store');
-Route::get('/beta/activate/{activation_code}', 'Belar\BetaUp\BetaController@activateBeta');
-
-Route::get('/beta', function()
-{
-	return View::make('betaup::beta.landing');
-});
+Route::get('/beta', 'Belar\Betaup\BetaController@index');
 
