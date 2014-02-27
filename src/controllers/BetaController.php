@@ -44,19 +44,29 @@ class BetaController extends \BaseController {
 					$beta = new Beta();
 					$beta->email = \Input::get('email');
 					
-					$activation_code = uniqid(rand(1000, 6000), true);
-					$beta->activation_code = $activation_code;
-					
-					\Mail::send('betaup::beta.email.activate', array('activation_code' => $activation_code), function($message)
-					{
-						$message->to(\Input::get('email'))->subject('Welcome!');
-					});
-					
+                    if(\Config::get('betaup::config.email_confirmation') === 'true' ) {
+                    
+                        $activation_code = uniqid(rand(1000, 6000), true);
+                        $beta->activation_code = $activation_code;
+
+                        \Mail::send('betaup::beta.email.activate', array('activation_code' => $activation_code), function($message)
+                        {
+                            $message->to(\Input::get('email'))->subject('Welcome!');
+                        });
+                        
+                    }
+                    
+                     if(\Config::get('betaup::config.activated_by_default') === 'true' ) {
+                         
+                         $beta->activated = '1';
+                         $beta->activated_at = new \DateTime();
+                     }
+                    
 								
 					$beta->save();
-					return \Redirect::to('/beta')->with('global_success', 'You have been signed up successfuly!');
+					return \Redirect::to(\Config::get('betaup::config.uri'))->with('global_success', 'You have been signed up successfuly!');
 				}
-			return \Redirect::to('/beta')->withInput()->withErrors($validator)->with('message', 'Validation Errors!');
+			return \Redirect::to(\Config::get('betaup::config.uri'))->withInput()->withErrors($validator)->with('message', 'Validation Errors!');
 	}
 
 	/**
@@ -110,13 +120,13 @@ class BetaController extends \BaseController {
 			if ($active)
 				{
 					$active->activated = '1';
-					$active->activated_at = new DateTime;
+					$active->activated_at = new \DateTime();
 					$active->activation_code = '';
 					$active->save();
 
-					return \Redirect::to('/beta');
+					return \Redirect::to(\Config::get('betaup::config.uri'))->with('global_success', 'Activation successful'); 
 				}
-			return \Redirect::to('/beta');
+			return \Redirect::to(\Config::get('betaup::config.uri'))->with('global_error', 'Activation failed.');
 	}
     
     
@@ -144,10 +154,10 @@ class BetaController extends \BaseController {
                 $message->bcc($beta_users)->subject(\Input::get('subject'));
             });
            
-            return \Redirect::to('/beta/massmail')->with('global_success', 'Messages were scheduled.');        
+            return \Redirect::to(\Config::get('betaup::config.uri').'/massmail')->with('global_success', 'Messages have been scheduled.');        
        };
         
-       return \Redirect::to('/beta/massmail')->withInput()->withErrors($validator)->with('message', 'Validation Errors!');
+       return \Redirect::to(\Config::get('betaup::config.uri').'/massmail')->withInput()->withErrors($validator)->with('message', 'Validation Errors!');
 	}
     
 }

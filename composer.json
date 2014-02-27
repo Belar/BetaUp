@@ -16,7 +16,8 @@
             "src/migrations",
             "src/controllers",
             "src/models",
-            "src/views"
+            "src/views",
+            "src/facades"
         ],
         "psr-0": {
             "Belar\\Betaup": "src/"

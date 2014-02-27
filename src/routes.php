@@ -11,11 +11,16 @@
 |
 */
 
-Route::get('/beta/massmail', 'Belar\Betaup\BetaController@massMail');
-Route::post('/beta/massmail', 'Belar\Betaup\BetaController@massMailAction');
+Route::group(array('prefix' => \Config::get('betaup::config.uri')), function()
+{
 
-Route::post('beta', 'Belar\Betaup\BetaController@store');
-Route::get('/beta/activate/{activation_code}', 'Belar\Betaup\BetaController@activateBeta');
+Route::get('/massmail', 'Belar\Betaup\BetaController@massMail');
+Route::post('/massmail', 'Belar\Betaup\BetaController@massMailAction');
 
-Route::get('/beta', 'Belar\Betaup\BetaController@index');
 
+Route::get('/activate/{activation_code}', 'Belar\Betaup\BetaController@activateBeta');
+    
+Route::post('/', 'Belar\Betaup\BetaController@store');
+Route::get('/', 'Belar\Betaup\BetaController@index');
+
+});
