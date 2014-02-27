@@ -1,7 +1,7 @@
 BetaUp [beta]
 =======
 
-It's a Composer package for **Laravel** taht allows setting up pre-launch, sign up page with e-mail activation (confirmation). Package includes model for beta-user, migrations and basic view.
+It's a Composer package for **Laravel** that allows setting up pre-launch, sign up page with e-mail activation (confirmation). Package includes model for beta-user, migrations and basic view.
 
 ####Installation
 1. Add `"belar/betaup": "dev-master"` to your composer.json file and do `composer update`.
