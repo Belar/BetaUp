@@ -44,11 +44,11 @@ Next step are extended mass mail features. I'm also open for suggestions, feel f
 
 #####2.2.1
 
-- no need to publish assets anymore  
-- views split into parent-childs model  
+- removed assets physical dependency  
+- views are split into parent-childs model  
 - added config support (check docs above)  
-- social media icons added  
-- error/success alert with fade-out  
+- added social media icons  
+- added error/success alert with fade-out  
 - minor clean-ups  
 
 #####2.2.
