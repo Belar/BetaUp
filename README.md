@@ -1,3 +1,5 @@
+
+
 BetaUp [beta]
 =======
 
@@ -18,7 +20,7 @@ It's a Composer package for **Laravel** that allows setting up pre-launch, sign 
 4. (Optional) Publish config to adjust `php artisan config:publish belar/betaup`
 5. (Optional) Copy Views to adjust `php artisan view:publish belar/betaup`
 
-Now you should be able to access BetaUp via `your_domain/beta`.
+Now you should be able to access BetaUp via `your_domain/betaup`.
 
 ####Docs - Available functions
 #####Config 
@@ -53,6 +55,7 @@ I'm open for suggestions, feel free to write to me on [Twitter](https://twitter.
 
 #####2.3
 
+- mass mail active/inactive users
 - referal links
 - karma system
 - alert fade-out after X ms
