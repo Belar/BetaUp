@@ -40,10 +40,10 @@ Configuration file allows you to customize **BetaUp** options and you can find i
 NOTE: This options are available since version 2.3. If you are updating from version 2.2.1 or earlier, you need to run a migration which adds fields for referal code and karma value.  
 By default referal code is genereted to every newly submited email and 1 karma point is added to every user who successfuly confirms his email with activation link. At the same time referer is getting +1 karma if form was accessed via referal link in form of `.../betaup/referal/referal_code`.
 
-`showRefLink($cred)` - Shows referal code of a user based on it's id or email. Returns ref code or false if no data is present.
-`currentKarma($cred)` - Shows user's current karma based on if, referal code or email. Default karma is set to 0, but if no value is present, it will return false.
-`karmaUp($cred, $amount)` - Adds karma to user based on id, ref code or email. Second variable determines value. If user isn't present, returns false.
-`karmaOrMore($amount)` - Returns data of all users with karma even or higher than `$amount`.
+`showRefLink($cred)` - Shows referal code of a user based on it's id or email. Returns ref code or false if no data is present.  
+`currentKarma($cred)` - Shows user's current karma based on if, referal code or email. Default karma is set to 0, but if no value is present, it will return false.  
+`karmaUp($cred, $amount)` - Adds karma to user based on id, ref code or email. Second variable determines value. If user isn't present, returns false.  
+`karmaOrMore($amount)` - Returns data of all users with karma even or higher than `$amount`.  
 
 ####Incoming features
 
