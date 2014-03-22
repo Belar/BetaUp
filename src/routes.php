@@ -16,6 +16,9 @@ Route::group(array('prefix' => \Config::get('betaup::config.uri')), function()
 
 Route::get('/massmail', 'Belar\Betaup\BetaController@massMail');
 Route::post('/massmail', 'Belar\Betaup\BetaController@massMailAction');
+    
+    
+Route::get('/referal/{refer_code?}', 'Belar\Betaup\BetaController@index');
 
 
 Route::get('/activate/{activation_code}', 'Belar\Betaup\BetaController@activateBeta');
