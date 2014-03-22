@@ -47,7 +47,7 @@ By default referal code is genereted to every newly submited email and 1 karma p
 
 ####Incoming features
 
-Next step are extended mass mail features. I'm also open for suggestions, feel free to write to me on [Twitter](https://twitter.com/belardesign) or submit an issue.
+I'm open for suggestions, feel free to write to me on [Twitter](https://twitter.com/belardesign) or submit an issue. Next update will probably introduce some configuration options, maybe some styling, so BetaUp can be faster to customize.
 
 ####Changelog
 
