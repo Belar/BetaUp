@@ -1,6 +1,6 @@
 
 
-BetaUp [beta]
+BetaUp
 =======
 
 It's a Composer package for **Laravel** that allows setting up pre-launch, sign up page with e-mail activation (confirmation). Package includes model for beta-user, migrations and basic view.
@@ -29,8 +29,9 @@ Configuration file allows you to customize **BetaUp** options and you can find i
 `'email_confirmation' => 'false'` False by default, this option allows to turn e-mail confirmation off.  
 `'activated_by_default' => 'false'` False by default, you can determine if user should be activated by default.     
 `'social_icons' => 'true'` True by default, allows you to turn off Twitter and Facebook icons visible on landing page.  
-`'twitter_profile' => 'twitter_url'` URL for Twitter profile
-`'facebook_profile' => 'facebook_url'`URL for Facebook profile  
+`'twitter_profile' => 'twitter_url'` URL for Twitter profile.
+`'facebook_profile' => 'facebook_url'`URL for Facebook profile.
+`'alert_timeout' => '5000'` 5000 by default, determines time after which alerts should fade out (ms).
 
 #####Beta key generator  
 `generateBetaCode($amount)` - Generates `$amount` of unique Beta codes, 1 by default.  
