@@ -56,7 +56,7 @@ By default referal code is genereted to every newly submited email and 1 karma p
 
 ####Incoming features
 
-I did what I planned for BetaUp, but I'm open for suggestions; feel free to write to me on [Twitter](https://twitter.com/belardesign) or submit an issue via GitHub.
+I'm open for suggestions; feel free to write to me on [Twitter](https://twitter.com/belardesign) or submit an issue via GitHub.
 
 ####Credits
 
