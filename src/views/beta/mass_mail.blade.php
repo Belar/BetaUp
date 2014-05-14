@@ -3,7 +3,16 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 text-center">
+            <!-- Short introductory (optional) -->
+            <h3 class="tagline">
+                Mass-Mail allows lets you contact all subscribed user with a single form.<br>
+                You can choose between active and inactive users, based on their activation status.
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4 text-center">
 
             {{ Form::open(array('url' => \Config::get('betaup::config.uri').'/massmail', 'class'=>'form-signin')); }}
 

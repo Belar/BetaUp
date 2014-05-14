@@ -19,6 +19,7 @@ It's a Composer package for **Laravel** that allows setting up pre-launch, sign 
 3. Migrate `php artisan migrate --package="belar/betaup"`
 4. (Optional) Publish config to adjust `php artisan config:publish belar/betaup`
 5. (Optional) Copy Views to adjust `php artisan view:publish belar/betaup`
+6. (Optional) Publish assets [for default theme] `php artisan asset:publish belar/betaup`
 
 Now you should be able to access BetaUp via `your_domain/betaup`.
 
@@ -26,12 +27,14 @@ Now you should be able to access BetaUp via `your_domain/betaup`.
 #####Config 
 Configuration file allows you to customize **BetaUp** options and you can find it in `app/config/packages/belar/betaup` after publication (step 4 of installation).    
 `'uri' => 'betaup'` - package address prefix, by default it's yourdomain/betaup, you can change it to ex. yourdomain/amazinghype etc.  
-`'email_confirmation' => 'false'` False by default, this option allows to turn e-mail confirmation off.  
+`'email_confirmation' => 'true'` True by default, this option allows to turn e-mail confirmation off.  
 `'activated_by_default' => 'false'` False by default, you can determine if user should be activated by default.     
 `'social_icons' => 'true'` True by default, allows you to turn off Twitter and Facebook icons visible on landing page.  
-`'twitter_profile' => 'twitter_url'` URL for Twitter profile.
-`'facebook_profile' => 'facebook_url'`URL for Facebook profile.
-`'alert_timeout' => '5000'` 5000 by default, determines time after which alerts should fade out (ms).
+`'twitter_profile' => 'twitter_url'` URL for Twitter profile.  
+`'facebook_profile' => 'facebook_url'`URL for Facebook profile.  
+`'alert_timeout' => '5000'` 5000 by default, determines time after which alerts should fade out (ms).  
+`'dark_theme' => 'true'` Changes colour scheme to dark, set to 'false' for bright style.  
+`'main_background_image' => ''` Requires full URL path to the image, leave empty to keep default picture.  
 
 #####Beta key generator  
 `generateBetaCode($amount)` - Generates `$amount` of unique Beta codes, 1 by default.  
@@ -50,9 +53,18 @@ By default referal code is genereted to every newly submited email and 1 karma p
 
 ####Incoming features
 
-I'm open for suggestions, feel free to write to me on [Twitter](https://twitter.com/belardesign) or submit an issue. Next update will probably introduce some configuration options, maybe some styling, so BetaUp can be faster to customize.
+I did what I planned for BetaUp, but I'm open for suggestions; feel free to write to me on [Twitter](https://twitter.com/belardesign) or submit an issue via GitHub.
+
+####Credits
+
+Default theme is a modification of Magister template, published by Sergey Pozhilov on [gettemplate.com](http://www.gettemplate.com/).
 
 ####Changelog
+
+#####2.4
+
+- added new default theme
+- config update with theming options
 
 #####2.3
 

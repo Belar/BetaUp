@@ -3,12 +3,22 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 text-center">
 
+            <!-- Site Title, your name, HELLO msg, etc. -->
+            <h1 class="title">BetaUp</h1>
+            <h2 class="subtitle">Free pre-launch package</h2>
+
+            <!-- Short introductory (optional) -->
+            <h3 class="tagline">
+                Hello, you just installed a BetaUp.<br>
+                BetaUp is a pre-launch package for Laravel which allows you to build early access website for your website.
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4 text-center">
             {{ Form::open(array('url' => \Config::get('betaup::config.uri'), 'class'=>'form-signin')) }}
-
-            <h2 class="form-signin-heading">Sign Up</h2>
-
             <ul class="errors">
                 @foreach($errors->all() as $message)
                 <li class="text-danger">{{ $message }}</li>

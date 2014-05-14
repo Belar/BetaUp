@@ -9,7 +9,7 @@ return array(
     /**
      * Social media profiles of your service - put whole URL
      */
-    'email_confirmation' => 'false', // false to turn confirmation off
+    'email_confirmation' => 'true', // false to turn confirmation off
     'activated_by_default' => 'false', // true to set 'activated' to true by default for every sign-up
     
     /**
@@ -23,4 +23,10 @@ return array(
     *Message time out
     */
     'alert_timeout' => '5000', // determines time after which alert should fade out (ms)
+    
+     /*
+    *Styling
+    */
+    'dark_theme' => 'true', //Changes colour scheme to dark, 'false' for bright style
+    'main_background_image' => '', // Full URL path to the image, leave empty to keep default picture
 );
