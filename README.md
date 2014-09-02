@@ -5,7 +5,7 @@ BetaUp
 
 It's a Composer package for **Laravel** that allows setting up pre-launch, sign up page with e-mail activation (confirmation). Package includes model for beta-user, migrations and basic view.
 
-![BetaUp Default Theme - Magister](http://i.imgur.com/GqWG8dN.png)
+![BetaUp Default Theme - Magister](betaup.png)
 
 
 ####Installation
