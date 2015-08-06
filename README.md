@@ -1,4 +1,5 @@
 
+> BetaUp is no longer being actively developed. Feel free to fork and use this repo, but at the moment, I can't promise it will be updated to the newest version of Laravel.
 
 BetaUp
 =======
